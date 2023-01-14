@@ -1,0 +1,324 @@
+{
+    "data": [
+        {
+            "name": "\u5764",
+            "hexagram": "\u4dc1",
+            "value": 0
+        },
+        {
+            "name": "\u590d",
+            "hexagram": "\u4dd7",
+            "value": 1
+        },
+        {
+            "name": "\u5e08",
+            "hexagram": "\u4dc6",
+            "value": 2
+        },
+        {
+            "name": "\u4e34",
+            "hexagram": "\u4dd2",
+            "value": 3
+        },
+        {
+            "name": "\u8c26",
+            "hexagram": "\u4dce",
+            "value": 4
+        },
+        {
+            "name": "\u660e\u5937",
+            "hexagram": "\u4de3",
+            "value": 5
+        },
+        {
+            "name": "\u5347",
+            "hexagram": "\u4ded",
+            "value": 6
+        },
+        {
+            "name": "\u6cf0",
+            "hexagram": "\u4dca",
+            "value": 7
+        },
+        {
+            "name": "\u8c6b",
+            "hexagram": "\u4dcf",
+            "value": 8
+        },
+        {
+            "name": "\u9707",
+            "hexagram": "\u4df2",
+            "value": 9
+        },
+        {
+            "name": "\u89e3",
+            "hexagram": "\u4de7",
+            "value": 10
+        },
+        {
+            "name": "\u5f52\u59b9",
+            "hexagram": "\u4df5",
+            "value": 11
+        },
+        {
+            "name": "\u5c0f\u8fc7",
+            "hexagram": "\u4dfd",
+            "value": 12
+        },
+        {
+            "name": "\u4e30",
+            "hexagram": "\u4df6",
+            "value": 13
+        },
+        {
+            "name": "\u6052",
+            "hexagram": "\u4ddf",
+            "value": 14
+        },
+        {
+            "name": "\u5927\u58ee",
+            "hexagram": "\u4de1",
+            "value": 15
+        },
+        {
+            "name": "\u6bd4",
+            "hexagram": "\u4dc7",
+            "value": 16
+        },
+        {
+            "name": "\u5c6f",
+            "hexagram": "\u4dc2",
+            "value": 17
+        },
+        {
+            "name": "\u574e",
+            "hexagram": "\u4ddc",
+            "value": 18
+        },
+        {
+            "name": "\u8282",
+            "hexagram": "\u4dfb",
+            "value": 19
+        },
+        {
+            "name": "\u8e47",
+            "hexagram": "\u4de6",
+            "value": 20
+        },
+        {
+            "name": "\u65e2\u6d4e",
+            "hexagram": "\u4dfe",
+            "value": 21
+        },
+        {
+            "name": "\u4e95",
+            "hexagram": "\u4def",
+            "value": 22
+        },
+        {
+            "name": "\u9700",
+            "hexagram": "\u4dc4",
+            "value": 23
+        },
+        {
+            "name": "\u8403",
+            "hexagram": "\u4dec",
+            "value": 24
+        },
+        {
+            "name": "\u968f",
+            "hexagram": "\u4dd0",
+            "value": 25
+        },
+        {
+            "name": "\u56f0",
+            "hexagram": "\u4dee",
+            "value": 26
+        },
+        {
+            "name": "\u5151",
+            "hexagram": "\u4df9",
+            "value": 27
+        },
+        {
+            "name": "\u54b8",
+            "hexagram": "\u4dde",
+            "value": 28
+        },
+        {
+            "name": "\u9769",
+            "hexagram": "\u4df0",
+            "value": 29
+        },
+        {
+            "name": "\u5927\u8fc7",
+            "hexagram": "\u4ddb",
+            "value": 30
+        },
+        {
+            "name": "\u592c",
+            "hexagram": "\u4dea",
+            "value": 31
+        },
+        {
+            "name": "\u5265",
+            "hexagram": "\u4dd6",
+            "value": 32
+        },
+        {
+            "name": "\u9890",
+            "hexagram": "\u4dda",
+            "value": 33
+        },
+        {
+            "name": "\u8499",
+            "hexagram": "\u4dc3",
+            "value": 34
+        },
+        {
+            "name": "\u635f",
+            "hexagram": "\u4de8",
+            "value": 35
+        },
+        {
+            "name": "\u826e",
+            "hexagram": "\u4df3",
+            "value": 36
+        },
+        {
+            "name": "\u8d32",
+            "hexagram": "\u4dd5",
+            "value": 37
+        },
+        {
+            "name": "\u86ca",
+            "hexagram": "\u4dd1",
+            "value": 38
+        },
+        {
+            "name": "\u5927\u755c",
+            "hexagram": "\u4dd9",
+            "value": 39
+        },
+        {
+            "name": "\u664b",
+            "hexagram": "\u4de2",
+            "value": 40
+        },
+        {
+            "name": "\u566c\u55d1",
+            "hexagram": "\u4dd4",
+            "value": 41
+        },
+        {
+            "name": "\u672a\u6d4e",
+            "hexagram": "\u4dff",
+            "value": 42
+        },
+        {
+            "name": "\u777d",
+            "hexagram": "\u4de5",
+            "value": 43
+        },
+        {
+            "name": "\u65c5",
+            "hexagram": "\u4df7",
+            "value": 44
+        },
+        {
+            "name": "\u79bb",
+            "hexagram": "\u4ddd",
+            "value": 45
+        },
+        {
+            "name": "\u9f0e",
+            "hexagram": "\u4df1",
+            "value": 46
+        },
+        {
+            "name": "\u5927\u6709",
+            "hexagram": "\u4dcd",
+            "value": 47
+        },
+        {
+            "name": "\u89c2",
+            "hexagram": "\u4dd3",
+            "value": 48
+        },
+        {
+            "name": "\u76ca",
+            "hexagram": "\u4de9",
+            "value": 49
+        },
+        {
+            "name": "\u6da3",
+            "hexagram": "\u4dfa",
+            "value": 50
+        },
+        {
+            "name": "\u4e2d\u5b5a",
+            "hexagram": "\u4dfc",
+            "value": 51
+        },
+        {
+            "name": "\u6e10",
+            "hexagram": "\u4df4",
+            "value": 52
+        },
+        {
+            "name": "\u5bb6\u4eba",
+            "hexagram": "\u4de4",
+            "value": 53
+        },
+        {
+            "name": "\u5dfd",
+            "hexagram": "\u4df8",
+            "value": 54
+        },
+        {
+            "name": "\u5c0f\u755c",
+            "hexagram": "\u4dc8",
+            "value": 55
+        },
+        {
+            "name": "\u5426",
+            "hexagram": "\u4dcb",
+            "value": 56
+        },
+        {
+            "name": "\u65e0\u5984",
+            "hexagram": "\u4dd8",
+            "value": 57
+        },
+        {
+            "name": "\u8bbc",
+            "hexagram": "\u4dc5",
+            "value": 58
+        },
+        {
+            "name": "\u5c65",
+            "hexagram": "\u4dc9",
+            "value": 59
+        },
+        {
+            "name": "\u906f",
+            "hexagram": "\u4de0",
+            "value": 60
+        },
+        {
+            "name": "\u540c\u4eba",
+            "hexagram": "\u4dcc",
+            "value": 61
+        },
+        {
+            "name": "\u59e4",
+            "hexagram": "\u4deb",
+            "value": 62
+        },
+        {
+            "name": "\u4e7e",
+            "hexagram": "\u4dc0",
+            "value": 63
+        }
+    ]
+}

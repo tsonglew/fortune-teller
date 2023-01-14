@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "name": "子时",
+            "number": 1
+        },
+        {
+            "name": "丑时",
+            "number": 2
+        },
+        {
+            "name": "寅时",
+            "number": 3
+        },
+        {
+            "name": "卯时",
+            "number": 4
+        },
+        {
+            "name": "辰时",
+            "number": 5
+        },
+        {
+            "name": "巳时",
+            "number": 6
+        },
+        {
+            "name": "午时",
+            "number": 7
+        },
+        {
+            "name": "未时",
+            "number": 8
+        },
+        {
+            "name": "申时",
+            "number": 9
+        },
+        {
+            "name": "酉时",
+            "number": 10
+        },
+        {
+            "name": "戌时",
+            "number": 11
+        },
+        {
+            "name": "亥时",
+            "number": 12
+        }
+    ]
+}

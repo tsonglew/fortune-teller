@@ -1,0 +1,9 @@
+import enum
+
+
+class Luck(str, enum.Enum):
+    GREAT = "大吉"
+    NICE = "中吉"
+    GOOD = "小吉"
+    BAD = "中凶"
+    TERROR = "大凶"

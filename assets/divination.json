@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "name": "\u2630",
+            "hexagram": "\u4e7e",
+            "number": 1,
+            "value": 7,
+            "element": "金"
+        },
+        {
+            "name": "\u2631",
+            "hexagram": "\u5151",
+            "number": 2,
+            "value": 3,
+            "element": "金"
+        },
+        {
+            "name": "\u2632",
+            "hexagram": "\u79bb",
+            "number": 3,
+            "value": 5,
+            "element": "火"
+        },
+        {
+            "name": "\u2633",
+            "hexagram": "\u9707",
+            "number": 4,
+            "value": 1,
+            "element": "木"
+        },
+        {
+            "name": "\u2634",
+            "hexagram": "\u5dfd",
+            "number": 5,
+            "value": 6,
+            "element": "木"
+        },
+        {
+            "name": "\u2635",
+            "hexagram": "\u574e",
+            "number": 6,
+            "value": 2,
+            "element": "水"
+        },
+        {
+            "name": "\u2636",
+            "hexagram": "\u826e",
+            "number": 7,
+            "value": 4,
+            "element": "土"
+        },
+        {
+            "name": "\u2637",
+            "hexagram": "\u5764",
+            "number": 0,
+            "value": 0,
+            "element": "土"
+        }
+    ]
+}
