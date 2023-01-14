@@ -31,4 +31,7 @@ class MutualDivinationUtil:
                 ] = self._double_divination_util.get_double_divination_by_name(s[2])
 
     def get_mutual_divination(self, double_divination: DoubleDivination):
-        return self._divination_mapping.get(double_divination)
+        return (
+            self._divination_mapping.get(double_divination)
+            or DoubleDivinationUtil._none
+        )

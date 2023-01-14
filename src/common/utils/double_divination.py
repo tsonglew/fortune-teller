@@ -72,6 +72,7 @@ class DoubleDivinationUtil:
                 ] = self._value_to_double_divination_map[int(entry["value"])]
 
     def get_double_divination_by_value(self, value: int) -> DoubleDivination:
+        print(value)
         return self._value_to_double_divination_map.get(value) or self._none
 
     def get_double_divination_by_name(self, name: str) -> DoubleDivination:
@@ -101,7 +102,7 @@ class DoubleDivinationUtil:
         self, upper_divination: Divination, under_divination: Divination
     ) -> DoubleDivination:
         return self.get_double_divination_by_value(
-            upper_divination.value << 3 + under_divination.value
+            (upper_divination.value << 3) + under_divination.value
         )
 
     def get_bian_double_divination(
