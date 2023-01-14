@@ -38,8 +38,8 @@ class RunnerService:
         if len(nums) != 2:
             return None
 
-        upper_divination = self._divination_util.get_divination_by_value(nums[0] % 8)
-        under_divination = self._divination_util.get_divination_by_value(nums[1] % 8)
+        upper_divination = self._divination_util.get_divination_by_number(nums[0] % 8)
+        under_divination = self._divination_util.get_divination_by_number(nums[1] % 8)
 
         ben_double_divination = self._double_divination_util.get_ben_double_divination(
             upper_divination, under_divination
