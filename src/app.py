@@ -5,6 +5,7 @@ from api.beans.double_divination import DoubleDivination
 from common.utils.chrono import ChronoUtil
 from common.utils.divination import DivinationUtil
 from common.utils.double_divination import DoubleDivinationUtil
+from common.utils.luck import LuckUtil
 from common.utils.mutal_divination import MutualDivinationUtil
 from flask import Flask, jsonify, request
 from service.divination import DivinationService
@@ -23,11 +24,16 @@ double_divination_util = DoubleDivinationUtil(
 mutual_divination_util = MutualDivinationUtil(
     "../assets/mutual_divination.txt", double_divination_util
 )
+luck_util = LuckUtil(double_divination_util)
 
 divination_service = DivinationService(divination_util)
 double_divination_service = DoubleDivinationService(double_divination_util)
 runner_service = RunnerService(
-    divination_util, double_divination_util, chrono_util, mutual_divination_util
+    divination_util,
+    double_divination_util,
+    chrono_util,
+    mutual_divination_util,
+    luck_util,
 )
 
 

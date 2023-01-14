@@ -1,7 +1,7 @@
 import enum
 
 
-class Luck(str, enum.Enum):
+class LuckEnum(str, enum.Enum):
     GREAT = "大吉"
     NICE = "中吉"
     GOOD = "小吉"

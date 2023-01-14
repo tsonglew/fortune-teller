@@ -8,6 +8,7 @@ from api.beans.result import Result, SubResult
 from common.utils.chrono import ChronoUtil
 from common.utils.divination import DivinationUtil
 from common.utils.double_divination import DoubleDivinationUtil
+from common.utils.luck import LuckUtil
 from common.utils.mutal_divination import MutualDivinationUtil
 
 
@@ -17,6 +18,7 @@ class RunnerService:
     _double_divination_util: DoubleDivinationUtil
     _chrono_util: ChronoUtil
     _mutual_divination_util: MutualDivinationUtil
+    _luck_util: LuckUtil
 
     def __init__(
         self,
@@ -24,11 +26,13 @@ class RunnerService:
         double_divination_util: DoubleDivinationUtil,
         chrono_util: ChronoUtil,
         mutual_divination_util: MutualDivinationUtil,
+        luck_util: LuckUtil,
     ):
         self._divination_util = divination_util
         self._double_divination_util = double_divination_util
         self._chrono_util = chrono_util
         self._mutual_divination_util = mutual_divination_util
+        self._luck_util = luck_util
 
     def run(self, nums: List[int]) -> Optional[Result]:
         if len(nums) != 2:
@@ -58,6 +62,7 @@ class RunnerService:
                 *self._double_divination_util.get_ti_yong_divination(
                     ben_double_divination, moving_line_idx
                 ),
+                self._luck_util.get_luck(ben_double_divination, moving_line_idx)
             ),
             process=SubResult(
                 "互卦",
@@ -65,6 +70,7 @@ class RunnerService:
                 *self._double_divination_util.get_ti_yong_divination(
                     mutual_double_divination, moving_line_idx
                 ),
+                self._luck_util.get_luck(mutual_double_divination, moving_line_idx)
             ),
             end=SubResult(
                 "变卦",
@@ -72,6 +78,7 @@ class RunnerService:
                 *self._double_divination_util.get_ti_yong_divination(
                     bian_double_divination, moving_line_idx
                 ),
+                self._luck_util.get_luck(bian_double_divination, moving_line_idx)
             ),
         )
 
