@@ -1,6 +1,7 @@
 import datetime
 from typing import List, Optional
 
+import pytz
 from api.beans.chrono import Chrono
 from api.beans.divination import Divination
 from api.beans.double_divination import DoubleDivination
@@ -85,5 +86,8 @@ class RunnerService:
 
     def get_moving_line_idx(self) -> int:
         return (
-            self._chrono_util.get_chrono_by_datetime(datetime.datetime.now()).number - 1
+            self._chrono_util.get_chrono_by_datetime(
+                datetime.datetime.now(tz=pytz.timezone("Asia/Shanghai"))
+            ).number
+            - 1
         ) % 6
