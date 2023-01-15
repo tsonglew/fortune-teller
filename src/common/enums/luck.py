@@ -7,3 +7,4 @@ class LuckEnum(str, enum.Enum):
     GOOD = "小吉"
     BAD = "中凶"
     TERROR = "大凶"
+    UNKNOWN = ""

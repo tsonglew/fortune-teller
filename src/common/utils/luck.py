@@ -1,5 +1,3 @@
-from typing import Optional
-
 from api.beans.double_divination import DoubleDivination
 from common.enums.element import ElementEnum
 from common.enums.luck import LuckEnum
@@ -30,7 +28,7 @@ class LuckUtil:
 
     def get_luck(
         self, double_divination: DoubleDivination, moving_line_idx: int
-    ) -> Optional[LuckEnum]:
+    ) -> LuckEnum:
         (
             ti_divination,
             yong_divination,
@@ -47,3 +45,4 @@ class LuckUtil:
             return LuckEnum.BAD
         if self._restriction_map.get(yong_divination.element) == ti_divination.element:
             return LuckEnum.TERROR
+        return LuckEnum.UNKNOWN

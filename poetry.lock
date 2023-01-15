@@ -59,6 +59,20 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "gunicorn"
+version = "20.1.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "importlib-metadata"
 version = "6.0.0"
 description = "Read metadata from Python packages"
@@ -177,13 +191,14 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "flake8 (<5)", "pytest-co
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "a2c2c3958313f732796623973b877be7be099976d5fd4f8f054a4af02c7a573f"
+content-hash = "313d5ff55d3595f090c03cf5777895f81492a5cf99c2b43eed7cb13482ad05fe"
 
 [metadata.files]
 black = []
 click = []
 colorama = []
 flask = []
+gunicorn = []
 importlib-metadata = []
 itsdangerous = []
 jinja2 = []

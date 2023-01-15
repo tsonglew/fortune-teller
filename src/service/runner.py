@@ -80,6 +80,7 @@ class RunnerService:
                 ),
                 self._luck_util.get_luck(bian_double_divination, moving_line_idx)
             ),
+            moving_line_idx=moving_line_idx,
         )
 
     def get_moving_line_idx(self) -> int:

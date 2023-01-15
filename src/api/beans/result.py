@@ -40,10 +40,12 @@ class Result:
     start: SubResult
     process: SubResult
     end: SubResult
+    moving_line_idx: int
 
     def to_json(self):
         return {
             "开始": self.start.to_json(),
             "过程": self.process.to_json(),
             "结果": self.end.to_json(),
+            "动爻": self.moving_line_idx + 1,
         }
