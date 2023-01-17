@@ -14,15 +14,15 @@ from service.runner import RunnerService
 
 app = Flask(__name__)
 
-chrono_util = ChronoUtil("../assets/chrono.json")
-divination_util = DivinationUtil("../assets/divination.json")
+chrono_util = ChronoUtil("assets/chrono.json")
+divination_util = DivinationUtil("assets/divination.json")
 double_divination_util = DoubleDivinationUtil(
-    "../assets/double_divination.json",
-    "../assets/double_divination_property_name.txt",
+    "assets/double_divination.json",
+    "assets/double_divination_property_name.txt",
     divination_util,
 )
 mutual_divination_util = MutualDivinationUtil(
-    "../assets/mutual_divination.txt", double_divination_util
+    "assets/mutual_divination.txt", double_divination_util
 )
 luck_util = LuckUtil(double_divination_util)
 
@@ -72,7 +72,7 @@ def divination_list():
 
 @app.route("/run", methods=["GET"])
 def run():
-    # TODO: check inupt params
+    # TODO: check input params
     nums = [int(i) for i in str(request.args.get("nums")).split(",")]
     nums.extend([0] * (2 - len(nums)))
     return runner_service.run(nums).to_json()
