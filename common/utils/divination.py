@@ -1,12 +1,11 @@
 import json
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Union
 
 from api.beans.divination import Divination
 from common.enums.element import ElementEnum
 
 
 class DivinationUtil:
-
     _value_to_divination_map: Dict[int, Divination]
     _name_to_divination_map: Dict[str, Divination]
     _number_to_divination_map: Dict[int, Divination]
@@ -30,9 +29,10 @@ class DivinationUtil:
                     int(entry["number"]),
                     ElementEnum(entry["element"]),
                 )
-                self._number_to_divination_map[d.number] = self._name_to_divination_map[
-                    d.name
-                ] = self._value_to_divination_map[d.value] = d
+                self._number_to_divination_map[d.number] = \
+                    self._name_to_divination_map[
+                        d.name
+                    ] = self._value_to_divination_map[d.value] = d
 
     def get_divination_by_value(self, value: int) -> Divination:
         return self._value_to_divination_map.get(value) or self._none
