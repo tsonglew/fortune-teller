@@ -11,6 +11,7 @@ class DoubleDivination:
     _value: int
     _hexagram: str
     _property_name: str
+    _desc: str
 
     def __init__(
         self,
@@ -20,6 +21,7 @@ class DoubleDivination:
         value: int,
         hexagram: str,
         property_name: str,
+        desc: str,
     ) -> None:
         self._upper = upper
         self._under = under
@@ -28,6 +30,7 @@ class DoubleDivination:
         self._value = value
         self._hexagram = hexagram
         self._property_name = property_name or ""
+        self._desc = desc
 
     @property
     def upper(self) -> Divination:
@@ -53,6 +56,10 @@ class DoubleDivination:
     def property_name(self) -> str:
         return self._property_name
 
+    @property
+    def desc(self) -> str:
+        return self._desc
+
     def to_json(self) -> Dict[str, Union[str, int, Dict[str, Union[str, int]]]]:
         return {
             "upper": self.upper.to_json(),
@@ -61,4 +68,5 @@ class DoubleDivination:
             "value": self.value,
             "hexagram": self.hexagram,
             "property_name": self.property_name,
+            "desc": self.desc,
         }

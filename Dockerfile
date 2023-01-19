@@ -3,5 +3,5 @@ ADD . /app
 WORKDIR /app
 RUN python -m pip install -r requirements.txt
 
-WORKDIR /app/src
+WORKDIR /app
 CMD [ "gunicorn", "-w", "4", "-b", "0.0.0.0", "app:app" ]

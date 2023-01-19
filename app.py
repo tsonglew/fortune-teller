@@ -1,13 +1,12 @@
 from typing import Union
 
-from api.beans.divination import Divination
-from api.beans.double_divination import DoubleDivination
+from flask import Flask, jsonify, request
+
 from common.utils.chrono import ChronoUtil
 from common.utils.divination import DivinationUtil
 from common.utils.double_divination import DoubleDivinationUtil
 from common.utils.luck import LuckUtil
 from common.utils.mutal_divination import MutualDivinationUtil
-from flask import Flask, jsonify, request
 from service.divination import DivinationService
 from service.double_divination import DoubleDivinationService
 from service.runner import RunnerService
@@ -19,6 +18,7 @@ divination_util = DivinationUtil("assets/divination.json")
 double_divination_util = DoubleDivinationUtil(
     "assets/double_divination.json",
     "assets/double_divination_property_name.txt",
+    "assets/double_divination_record.txt",
     divination_util,
 )
 mutual_divination_util = MutualDivinationUtil(

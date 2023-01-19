@@ -21,12 +21,14 @@ class DoubleDivinationUtil:
         0,
         "",
         "",
+        "",
     )
 
     def __init__(
         self,
         double_divination_json_path: str,
         double_divination_property_name_txt_path: str,
+        double_divination_to_record_txt_path: str,
         divination_util: DivinationUtil,
     ):
 
@@ -36,6 +38,13 @@ class DoubleDivinationUtil:
         self._divination_util = divination_util
 
         property_name_mapping: Dict[str, str] = {}
+        desc_mapping: Dict[str, str] = {}
+
+        with open(double_divination_to_record_txt_path) as txt_file:
+            for l in txt_file.readlines():
+                s = l.split()
+                desc_mapping[s[0]] = s[1]
+
         with open(double_divination_property_name_txt_path) as txt_file:
             for l in txt_file.readlines():
                 s = l.split()
@@ -66,6 +75,7 @@ class DoubleDivinationUtil:
                     int(entry["value"]),
                     str(entry["hexagram"]),
                     property_name_mapping.get(str(entry["name"])) or "",
+                    desc_mapping.get(str(entry["name"])) or "",
                 )
                 self._name_to_double_divination_map[
                     str(entry["name"])
