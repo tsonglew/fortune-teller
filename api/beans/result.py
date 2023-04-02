@@ -13,12 +13,12 @@ class SubResult:
     luck: LuckEnum
 
     def __init__(
-        self,
-        divination_name: str,
-        double_divination: DoubleDivination,
-        ti_divination: Divination,
-        yong_divination: Divination,
-        luck: LuckEnum,
+            self,
+            divination_name: str,
+            double_divination: DoubleDivination,
+            ti_divination: Divination,
+            yong_divination: Divination,
+            luck: LuckEnum,
     ):
         self.divination_name = divination_name
         self.double_divination = double_divination

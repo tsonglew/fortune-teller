@@ -4,11 +4,11 @@ from typing import Dict, List, Tuple, Union
 from api.beans.divination import Divination
 from api.beans.double_divination import DoubleDivination
 from common.enums.element import ElementEnum
+from common.utils.description import DescriptionUtil
 from common.utils.divination import DivinationUtil
 
 
 class DoubleDivinationUtil:
-
     _value_to_double_divination_map: Dict[int, DoubleDivination]
     _name_to_double_divination_map: Dict[str, DoubleDivination]
 
@@ -22,14 +22,15 @@ class DoubleDivinationUtil:
         "",
         "",
         "",
+        "",
     )
 
     def __init__(
-        self,
-        double_divination_json_path: str,
-        double_divination_property_name_txt_path: str,
-        double_divination_to_record_txt_path: str,
-        divination_util: DivinationUtil,
+            self,
+            double_divination_json_path: str,
+            double_divination_property_name_txt_path: str,
+            divination_util: DivinationUtil,
+            description_util: DescriptionUtil,
     ):
 
         self._value_to_double_divination_map = {}
@@ -39,11 +40,6 @@ class DoubleDivinationUtil:
 
         property_name_mapping: Dict[str, str] = {}
         desc_mapping: Dict[str, str] = {}
-
-        with open(double_divination_to_record_txt_path) as txt_file:
-            for l in txt_file.readlines():
-                s = l.split()
-                desc_mapping[s[0]] = s[1]
 
         with open(double_divination_property_name_txt_path) as txt_file:
             for l in txt_file.readlines():
@@ -75,7 +71,7 @@ class DoubleDivinationUtil:
                     int(entry["value"]),
                     str(entry["hexagram"]),
                     property_name_mapping.get(str(entry["name"])) or "",
-                    desc_mapping.get(str(entry["name"])) or "",
+                    **description_util.get_description(str(entry["name"]))
                 )
                 self._name_to_double_divination_map[
                     str(entry["name"])
@@ -91,7 +87,7 @@ class DoubleDivinationUtil:
         return list(self._value_to_double_divination_map.values())
 
     def get_ti_yong_divination(
-        self, double_divination: DoubleDivination, moving_line_idx: int
+            self, double_divination: DoubleDivination, moving_line_idx: int
     ) -> Tuple[Divination, Divination]:
 
         ti_divination, yong_divination = (
@@ -108,16 +104,16 @@ class DoubleDivinationUtil:
         return ti_divination, yong_divination
 
     def get_ben_double_divination(
-        self, upper_divination: Divination, under_divination: Divination
+            self, upper_divination: Divination, under_divination: Divination
     ) -> DoubleDivination:
         return self.get_double_divination_by_value(
             (upper_divination.value << 3) + under_divination.value
         )
 
     def get_bian_double_divination(
-        self, ben_double_divination: DoubleDivination, moving_line_idx: int
+            self, ben_double_divination: DoubleDivination, moving_line_idx: int
     ) -> DoubleDivination:
-        print(f"moving line: {moving_line_idx+ 1}")
+        print(f"moving line: {moving_line_idx + 1}")
         return self.get_double_divination_by_value(
             ben_double_divination.value ^ (1 << moving_line_idx)
         )

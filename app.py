@@ -3,6 +3,7 @@ from typing import Union
 from flask import Flask, jsonify, request
 
 from common.utils.chrono import ChronoUtil
+from common.utils.description import DescriptionUtil
 from common.utils.divination import DivinationUtil
 from common.utils.double_divination import DoubleDivinationUtil
 from common.utils.luck import LuckUtil
@@ -15,11 +16,12 @@ app = Flask(__name__)
 
 chrono_util = ChronoUtil("assets/chrono.json")
 divination_util = DivinationUtil("assets/divination.json")
+description_util = DescriptionUtil("assets/doubleDivinationDesc.xlsx")
 double_divination_util = DoubleDivinationUtil(
     "assets/double_divination.json",
     "assets/double_divination_property_name.txt",
-    "assets/double_divination_record.txt",
     divination_util,
+    description_util
 )
 mutual_divination_util = MutualDivinationUtil(
     "assets/mutual_divination.txt", double_divination_util
@@ -46,8 +48,9 @@ def index():
 def double_divination(arg: Union[int, str]):
     return jsonify(
         (
-            double_divination_util.get_double_divination_by_name(str(arg))
-            or double_divination_util.get_double_divination_by_value(int(arg))
+                double_divination_util.get_double_divination_by_name(str(arg))
+                or double_divination_util.get_double_divination_by_value(
+            int(arg))
         ).to_json()
     )
 
@@ -55,8 +58,8 @@ def double_divination(arg: Union[int, str]):
 @app.route("/divination/<arg>", methods=["GET"])
 def divination(arg: Union[int, str]):
     return (
-        divination_util.get_divination_by_name(str(arg))
-        or divination_util.get_divination_by_value(int(arg))
+            divination_util.get_divination_by_name(str(arg))
+            or divination_util.get_divination_by_value(int(arg))
     ).to_json()
 
 
